@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Allen</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-11-29T09:08:41+08:00</updated>
+  <updated>2023-11-29T09:39:26+08:00</updated>
   <author>
     <name>AllenXDong</name>
     <uri>http://localhost:4000/</uri>
@@ -72,6 +72,95 @@ After you have installed (see above), run bundle exec jekyll help and you should
 Listed in help you will see new commands available to you:
 
   draft      # Creates a new ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Teamcenter学习</title>
+    <link href="http://localhost:4000/posts/teamcenter%E5%AD%A6%E4%B9%A0/" rel="alternate" type="text/html" title="Teamcenter学习" />
+    <published>2023-11-28T18:26:00+08:00</published>
+  
+    <updated>2023-11-28T18:26:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/teamcenter%E5%AD%A6%E4%B9%A0/</id>
+    <content src="http://localhost:4000/posts/teamcenter%E5%AD%A6%E4%B9%A0/" />
+    <author>
+      <name>AllenXDong</name>
+    </author>
+
+  
+    
+    <category term="开发" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+Teamcenter笔记
+
+概述
+
+客户端定制
+服务端定制
+
+第一章
+第二章
+
+2.1对象模型和系统框架
+
+Item和Item Revision模型
+POM
+Item
+Item Revision
+动态类型
+Relations
+修改Item/Item Recision
+属性及属性分类
+Dataset Model
+Form Model
+
+
+第三章
+
+3.1客户端开发技术
+
+3.11AWT &amp;amp; Java Swing
+
+RCP的概念
+透视图 perspective
+视图 View
+
+
+3.2Teamcenter插件开发
+
+
+
+对插件程序的注册方法: .
+
+
+3.3TC开发环境搭建
+
+
+
+创建TC插件项目
+配置反编译环境
+
+
+3.4客户化开发常用接口
+
+com.teamcenter.rac.aifrcp
+com.teamcenter.rac .common
+com.teamcente...
     </summary>
   
 
