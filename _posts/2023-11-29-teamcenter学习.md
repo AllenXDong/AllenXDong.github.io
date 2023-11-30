@@ -1530,8 +1530,8 @@ public class SampleHandler extends AbstractHandler {
 <?eclipse version="3.4"?>
 <plugin>
 	<extension point="org.eclipse.ui.commands">
-		<command id="CustNewItem" name="Create New Item">;
-		<command id="CustNewDataset" name="Create New Dataset">;
+		<command id="CustNewItem" name="Create New Item">
+		<command id="CustNewDataset" name="Create New Dataset">
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler commandId="CustNewDataset" 
