@@ -448,9 +448,9 @@ Base Eclipse extension points and services (使用org.eclipse.ui.menus extension
 <li><p>可扩展性：Eclipse基于插件进行扩展的思想使得用户可以方便地搭建各种规模、类型和用途的应用程序。按照Eclipse官方的说法，Eclipse RCP一开始就被设计为可扩展的。</p></li>
 <li><p>使用体验：Eclipse为各种操作系统提供了本地图形接口包。当RCP运行时，Eclipse首先直接调用本机窗口组件，只有没有本机所需组件时才进行模拟。无论RCP在哪种操作系统上运行，都可以保持与本机一致的外观和行为。一个设计优良的富客户端，可以提供诸如拖曳操作、剪切板、导航等 UI元素。UI设计者也可以利用各种界面工具，轻松设计出完美的用户界面。</p></li>
 </ul>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200317163944826.png" alt="image-20200317163944826" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200317163944826.png" alt="image-20200317163944826" /></p>
 <p>CP中的每个视图都对应程序中的UI界面。每个透视图对应一个应用组合，如在Teamcenter中 ：我的Teamcenter、结构管理器、分类管理等。下图是以Teamcenter系统为例展示RCP应用程序运行的界面：</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC//image-20200317164014013.png" alt="image-20200317164014013" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC//image-20200317164014013.png" alt="image-20200317164014013" /></p>
 <h5 id="透视图-perspective">透视图 perspective</h5>
 <p>一个客户端可以运行多个透视图，但每次在界面中只显示一个透视图；在一个透视图中可以添加和重新排列视图，以在透视图中同时显示多个信息集；可以保存重排的透视图，并使用当前名字，也可以为新的排列创建一个新名字。系统管理员可以使用 HiddenPerspectives 首选项来显示/隐藏各个透视图功能。</p>
 <h5 id="视图-view">视图 View</h5>
@@ -474,13 +474,13 @@ Workbench和Workspace是 Eclipse平台的两个必备的插件它们.</p>
 <li>plugin.xml是一 -个XML文件，它描述了扩展和扩展点的信息</li>
 </ul></li>
 </ul>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_16-44-28.png" alt="" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_16-44-28.png" alt="" /></p>
 <p>插件目录</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_16-45-47.png" alt="" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_16-45-47.png" alt="" /></p>
 <p>标签的结解释，各个标签页的作用</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_16-46-19.png" alt="" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_16-46-19.png" alt="" /></p>
 <p>扩展与扩展点</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_16-47-43.png" alt="" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_16-47-43.png" alt="" /></p>
 <p>Plugin. xmI中扩展点(extens ion point) 解释</p>
 <ul>
 <li>org.eclipse.ui.perspectives：定义新透视图。</li>
@@ -750,7 +750,7 @@ com.teamcenter.rac.cme.mpp			对MSE应用进行了实现
   com.teamcenter.rac.query builder	 对查询构建器进行了实现
   com.teamcenter.rac.explorer			对浏览器进行了实现
 ```
-<p><img src="/resources/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_17-51-05.png" alt="" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/Snipaste_2020-03-17_17-51-05.png" alt="" /></p>
 <h4 id="任务要求">任务要求:</h4>
 <p>1)、掌握jar的解压方式;
 2)、掌握使用Common包中的类，构建Jar包，实现快捷菜单添加新建零组件新建数据集的功能。</p>
@@ -809,7 +809,7 @@ Manifest-Version: 1.0
 <h3 id="3-5tcsession的使用">3.5TCSession的使用</h3>
 <p>在进行Teamcenter客户化(二次开发)前，我们首先要了解哪些是核心API。只有掌握了核心API的使用，才能游刃有余的进行定制开发。下图展示了Teamcenter的核心API。从图中可以看到TC Session是核心API的核
 心，通过TC Session沟通了应用程序AbstractAIFUIApplication、业务对象TCComponent、缓存AIFComponentManager、数据类型Type、业务服务Service。其中Type和Services是 各种相关类的集合。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/Snipaste_2020-03-21_17-59-13.png" alt="" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/Snipaste_2020-03-21_17-59-13.png" alt="" /></p>
 <p>TcSession类在com.teamcenter.rac.kernel包中，是com.teamcenter.rac.aif.kernel.AbstractAIFSession的子类。TC会话负责登录到TC，并记录会话信息。它扩i展了AbstractAIFSession类的功能，使用AIF会话管理器管理会话。AIF : Application Integration Framework</p>
 <h4 id="获取tcsession的三种办法">获取TCSession的三种办法</h4>
 <h5 id="从当前应用程序直接获取tc-session">从当前应用程序直接获取TC Session</h5>
@@ -1748,9 +1748,9 @@ public class SampleHandler extends AbstractHandler {
 <p>1、修改Views,Dial og boxes,Forms，Wizards的布局和内容</p>
 <p>可以使用渲染文件Style sheets来改变Teamcenter views, dialogboxes, forms,和wizards using的布局与内容。Style sheets是一种数据集类型，使用Style sheets可以按照实际需求加载定制的数据属性。可供修改的数据对象包括Views，Dialog boxes，Forms的窗口信息。使用渲染文件进行定制的步骤如下</p>
 <p>(1)在TC的Newstuff文件夹中新建XMLRenderingStylesheet数据集。例如，要修改汇总(Summary)视图的布局和加载属性，可以命名数据集为myItemSummary。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621222406300.png" alt="image-20200621222406300" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621222406300.png" alt="image-20200621222406300" /></p>
 <p>(2)使用“数据集…..”查询，检索系统中现有的XMLRenderingStylesheet,找到Itemsummary数据集。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621222416976.png" alt="image-20200621222416976" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621222416976.png" alt="image-20200621222416976" /></p>
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
@@ -1976,11 +1976,11 @@ All Rights Reserved.
 ```
 <p>(3)将Itemsummary数据集中的XML脚本语句复制到新建的数据集myItemSummary中。可以通过修改XML脚本，增添属
 性、修改布局，单击工具栏中的保存按钮进行保存。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621222429260.png" alt="image-20200621222429260" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621222429260.png" alt="image-20200621222429260" /></p>
 <p>(4)从查看器中“注册类型”的下拉列表框中选择C9_ myItem，“样式表类型” 的下拉列表框选择“汇总”，单击“应用按钮”，进行配置。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621222441988.png" alt="image-20200621222441988" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621222441988.png" alt="image-20200621222441988" /></p>
 <p>(5)在新建的C9 myItem业务对象中，在汇总视图中查看配置后的效果。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621222450202.png" alt="image-20200621222450202" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621222450202.png" alt="image-20200621222450202" /></p>
 <p>2、增加或修改对象图标
 1)可以修改BMIDE中现有的业务对象图标，或者为新创建的业务对象指定图标。从BIMIE中导入图标的素材，然后将对
 应的图标添加到零组件的属性中，通过部署项目完成图标的设置。实例:业务建模器中添加图标</p>
@@ -1997,9 +1997,9 @@ release_ statuses. I_ Released.ICON=images/ C9_ IReleased.png
 <p>(5)将configuration_ 10000.1 .0文件夹复制到%TC_ ROOT%\portal\plugins文件家中， 和系统中已有的configuration_ 10000.1 .0文件夹进行合并。</p>
 <p>(6)使用genregxml.bat文件注册配置文件，注册完成后清除TC缓存。再使用普通用户登录Teamcenter,查看刚才发布的数据，此时发布状态字变为自定义的图标。</p>
 <h3 id="5-2-无代码化定制应用">5.2 无代码化定制应用</h3>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621163511952.png" alt="image-20200621163511952" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621163511952.png" alt="image-20200621163511952" /></p>
 <p>授权，针对于组织中的组和子组的用户，开放或收回特定的应用模块。例如，针对工程组的用户，可以开放组织和工作流设计器的功能，由工程组的人员进行组织和流程的设计。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621163546735.png" alt="image-20200621163546735" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621163546735.png" alt="image-20200621163546735" /></p>
 <h3 id="5-2-2-首选项">5.2.2 首选项</h3>
 <p><strong>1、首选项概念</strong></p>
 <p>首选项是存储在TC数据库中的环境变量。当设置和修改的时候都要读取。例如可以设置登陆的名称和属性表显示的列，一些权限等都与这些首选项有关。站点（Site）首选项：站点的首选项影响到Teamcenter的整个站点。只有管理员可以创建和修改；用户（User）首选项：用户首选项是针对特定用户的，这个用户可设置和创建，具有最高的优先级，dba组的人员也可创建和修改；组（Group）首选项和 角色（Role）首选项：组和角色的首选项是针对特定的组和角色的，组管理员有权限设置，dba组的人员也可创建和修改</p>
@@ -2008,7 +2008,7 @@ release_ statuses. I_ Released.ICON=images/ C9_ IReleased.png
 <p>（1）系统首选项：适用于整个站点；</p>
 <p>（2）分级首选项有保护范围：用户，角色，组，站点，级别从用户到站点依次递增。</p>
 <p>首选项位置优先顺序是：用户>角色>组>站点。系统根据级别搜索首选项值，开始于当前定义的首选项保护范围，然后根据当前用户->当前角色->当前组->当前站点的顺序读取</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621163722189.png" alt="image-20200621163722189" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621163722189.png" alt="image-20200621163722189" /></p>
 <p>首选项保护范围：定义保护范围，确定了可创建首选项实例的最低级别，按从高到低的级别顺序依次为站点和系统>组>角色>用户。</p>
 <p>比如系统读取一个保护范围为角色的首选项：</p>
 <p>（1）如果当前角色有一个值，就使用这个值；</p>
@@ -2048,7 +2048,7 @@ generatexml | import | migrate | delete | remove | upgradexml}
 <p>选项</p>
 <p><strong>5、 常用首选项举例</strong></p>
 <p>下表是在TC系统中设置的常用首选项，通过系统配置，可实现对应的功能，构建站点级别的参数设置。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621164050278.png" alt="image-20200621164050278" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621164050278.png" alt="image-20200621164050278" /></p>
 <p>HiddenPerspectives–隐藏功能模块</p>
 <p><strong>AE_dataset_default_keep_limit</strong>数据集保存的版本数量。当超过这</p>
 <p>个数值以后，老的版本即被删除。</p>
@@ -2056,13 +2056,13 @@ generatexml | import | migrate | delete | remove | upgradexml}
 <p>1、访问权限
 在分布式计算机环境中，对象保护和所有权管理非常重要，对象代表了数据库中的产品信息，TC可执行两个层次的数据保护:基于规则的保护:作为-一个管理员，你可以定义多种条件或规则来控制对对象的访问，这些规则影响TC的整个节点，用访问控制器来定义。</p>
 <p>基于对象的保护:可更改对象访问控制权限的任何TC用户都可以设置基于对象的保护ACL (访问控制列表)，来创建基于规则保护外的保护。当需要对具体的对象设置较宽松或较有限的访问权限时，对象的ACL非常有用，访问控制列表ACL显示了当前对一个对象的保护，并允许用户更改这些保护。初始的保护决定于规则树。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621164235383.png" alt="image-20200621164235383" /></p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621164245452.png" alt="image-20200621164245452" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621164235383.png" alt="image-20200621164235383" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621164245452.png" alt="image-20200621164245452" /></p>
 <p><strong>2、访问管理器</strong>
 在访问管理器规则树中来组织规则，并按照该规则在树结构中的位置起作用。TC安装时包括的默认规则树假定只要权限没被显示地拒绝，用户就拥有该访问权限。当应用于所选对象的条件满足时，在ACL中定义的权限将被使用。注意:在规则树中的子分支总是优先于父结构。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621164330705.png" alt="image-20200621164330705" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621164330705.png" alt="image-20200621164330705" /></p>
 <p><strong>创建和管理命名的ACL</strong></p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621164343069.png" alt="image-20200621164343069" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621164343069.png" alt="image-20200621164343069" /></p>
 <p><strong>4、ACL 的优先级控制</strong>
 对某一对象有效的ACL是在规则树中适用于该对象的所有命名的ACL的累积组合。ACL的优先级顺序:当判断规则树中的优先级顺序时,
 遵守下列方针:</p>
@@ -2082,7 +2082,7 @@ generatexml | import | migrate | delete | remove | upgradexml}
 不要直接修改COTS规则(系统内置设置的规则) , 但是可以创建一个新的规则来代替它。</li>
 <li>在作修改前或后需要导出规则树备份。</li>
 </ul>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621164534006.png" alt="image-20200621164534006" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621164534006.png" alt="image-20200621164534006" /></p>
 <h2 id="第六章">第六章</h2>
 <p>BOM管理是PLM系统管理的核心之一。在产品生命的各个阶段,都有BOM的身影，因此我们必须掌握BOM的二次开发技能，以及对应的业务场景。本教程系列主要用于探讨BOM管理的基本业务，以及围绕BOM管理，可能涉及的开发知识点。
 TC报表开发技术</p>
@@ -2106,12 +2106,12 @@ TC报表开发技术</p>
 <h3 id="6-1-3-为什么需要报表开发">6.1.3 为什么需要报表开发</h3>
 <p>每个企业都有自己的特定需求，Teamcenter中有自带的报表的导出方式和模板，TC中自带的报表导出已经不能满足企业的需求。这也是西门子提供二次开发的目的。报表的自动化、个性化生成对企业成功实施PDM系统有着重要意义。尽管TC中程序处理BOM方面功能非常强大，但由于企业内部各类报表都有固定的模版和格式，因此需要掌握BOM报表开发相关知识。.</p>
 <h3 id="6-1-4-tc报表生成方式">6.1.4 TC报表生成方式</h3>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621194046940.png" alt="image-20200621194046940" /></p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621194136136.png" alt="image-20200621194136136" /></p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621194155240.png" alt="image-20200621194155240" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621194046940.png" alt="image-20200621194046940" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621194136136.png" alt="image-20200621194136136" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621194155240.png" alt="image-20200621194155240" /></p>
 <p>TC系统为我们提供了两种方式的报表:HTML、XSL
 每种报表都有对多国语言支持版本，所以下面对话框中有4个选项，我们选第一个。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621194235529.png" alt="image-20200621194235529" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621194235529.png" alt="image-20200621194235529" /></p>
 <p>通过开发生成报表的方法.
 在现行的报表开发中，主要有以下三种开发方式:</p>
 <ul>
@@ -2124,8 +2124,8 @@ TC报表开发技术</p>
 </ul></li>
 <li>三、C语言编程，EXE文件执行</li>
 </ul>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621200117704.png" alt="image-20200621200117704" /></p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621200127979.png" alt="image-20200621200127979" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621200117704.png" alt="image-20200621200117704" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621200127979.png" alt="image-20200621200127979" /></p>
 <p><strong>1、POI技术</strong>
 POI用法:</p>
 <p>Apache POI是用Java编写的免费开源的跨平台的Java API,Apache POI提供API给 Java程式对Mi crosoft 0ffice格式档案读
@@ -2250,7 +2250,7 @@ BomDFS(childBomline)
 <p><strong>BOM遍历算法</strong>
 鉴于BOM汇总是由各项目下的子类逐层向父类归并的情况，同时考虑到企业的BOM汇总中明细表项目较多、层次较浅(- -般为3~ 4层)的特点，本文BOM开发采用深度优先遍历算法，由( TCComponentBOMLine )aifcomponentcontexts[0].getComponent( )获取选定的根节点，利用getChildren( )的方法获取根的子节点，对于每-一个子节点重复利用函数getChildren( )的方法获得其子组件，如此循环下去直到没有子节点，完成BOM的遍历。</p>
 <p>由于事先无法预知BOM汇总中零/部件的具体数量，所以可以用数组来容纳所汇总的零/部件信息是不现实的，而且数组-般只能存放-种类型的数据，而在产品信息中数据类型显然不能是单一的，因此采用Vector类来解决汇总过程中的数据存放问题。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621200906710.png" alt="image-20200621200906710" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621200906710.png" alt="image-20200621200906710" /></p>
 <p>操作步骤:
 获取Teamcenter数据，以获取Teamcenter中 Item的属性为例。
 Step1.获取Item，</p>
@@ -2336,7 +2336,7 @@ return datasetcomponent ;
 }
 ```
 <p>Step6: 创建报表的界面。</p>
-<p><img src="/resources/杂七杂八/杂七杂八/TC/image-20200621201516481.png" alt="image-20200621201516481" /></p>
+<p><img src="/assets/杂七杂八/杂七杂八/TC/image-20200621201516481.png" alt="image-20200621201516481" /></p>
 Step7: 生成的临时文件。
 Step8: TC中创建的报表。
 ```xml
